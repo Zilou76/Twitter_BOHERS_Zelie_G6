@@ -1,0 +1,248 @@
+
+/*pour toutes les pages*/
+.body{
+    background-color: azure;
+}
+
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+    width: auto;
+    height: 70px;
+    justify-content: flex-start !important;
+}
+
+.toggle {
+    display: none;
+}
+
+
+
+
+.liste_nav{
+
+    padding-left: 0px;
+    margin-left: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.sub_new{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.button_navbar{
+    background-color: cornflowerblue;
+    margin-right: 10px;
+    transition: .4s;
+
+}
+
+.button_navbar:hover{
+    background-color: darkslateblue;
+}
+
+
+
+.box_navbar{
+    text-decoration-color: rgba(240, 248, 255, 0);
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+/*position du bouton ajouter*/
+
+.addbutton{
+    position: fixed;
+    right: 2rem;
+    bottom: 5%;
+    background-color:cornflowerblue;
+    opacity: .8;
+    padding: 0 .3rem;
+    border-radius: .4rem;
+    z-index: var(--z-tooltip);
+    transition: .4s;
+}
+
+.addbutton:hover{
+    background-color: darkslateblue;
+}
+
+.addbutton-icon{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+/*pages principale et de recherche*/
+
+.publications{
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    align-items: center;
+    
+    
+}
+
+.boite{
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10%;
+
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 10px;
+
+    
+
+}
+
+.marged_content{
+    display: flex;
+    margin-left: 10px;
+    margin-right: auto;
+}
+.content_box{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.avatar{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.poubelle{
+    width: 40px;
+    height: auto;
+}
+
+
+/*on passe sur les pages de types connection et inscription*/
+
+
+.form_connect_subscribe{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.boots_column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between !important;
+}
+
+.email_etc{
+    display: flex;
+    margin-bottom: 50 px !important;
+}
+
+
+
+
+
+/*premiere adaptation responsive*/
+
+/*sidenav ;-; */
+@media all and (max-width: 991px) {
+
+    header {
+        background: transparent;
+    }
+
+    .toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 20;
+        margin-right: 30px;
+    }
+
+    .logo {
+        position: relative;
+        z-index: 20;
+    }
+
+    .ouvrir {
+        display: block;
+    }
+
+    .fermer {
+        display: none !important;
+    }
+
+    .open .ouvrir {
+        display: none;
+    }
+
+    .open .fermer {
+        display: block !important;
+    }
+
+    .liste_nav {
+        position: absolute;
+        top: 0;
+        margin-left: -20px;
+        width: 50%;
+        height: 100vh;
+        background-color: cornflowerblue; ;
+        flex-direction: column;
+        padding: 2rem;
+        justify-content: space-around;
+        transform: translateX(-100%);
+        transition: transform 1s;
+    }
+
+    .liste_nav li a {
+        font-size: 2rem;
+    }
+
+    .btn {
+        font-size: 2rem;
+    }
+
+    .open .liste_nav {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 535px) {
+
+    .button_navbar{
+        width: 100px ;
+        height: auto ;
+        
+        
+        
+    }
+    .box_navbar{
+        justify-content: center;
+    }
+    .liste_nav li a {
+        font-size: 0.9rem;
+    }
+}
